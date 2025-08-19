@@ -237,21 +237,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   padding: 0 20px;
 }
 
-/* .recipe-card {
-
-  background: #fff;           
-  color: #543a28;
-  box-shadow: 0 0 10px #e6d7cb;
-  width: 250px;
-  text-align: center;
-  padding: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-} */
 .recipe-card {
   background: var(--white);         /*Before hover: white */
   color: var(--black);
@@ -263,6 +252,14 @@ body {
   cursor: pointer;
   border-radius: 12px;
   border: 1px solid var(--beige-light);
+  
+  
+  height: 300px;                /* uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
 }
 /* .recipe-card:hover {
   background: #e6d7cb;
