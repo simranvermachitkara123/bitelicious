@@ -72,9 +72,10 @@ body {
 /* Hero Section with image inside container */
 .hero {
   /* background-image: url('https://imgs.search.brave.com/GWeGro58hulsBCW5R8FABBac0wRdbzTA9bPkyrwo0d4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzExLzU5LzkwLzM4/LzM2MF9GXzExNTk5/MDM4MzJfVDhwSEQy/cTcyY2c2dHh1Sk45/ZzRDaXo4QWxKa0dt/WUouanBn'); */
+  /* background-image: url('https://imgs.search.brave.com/c01fMMzC5JqSITwki5JC4KEhyfHGRkQd9_liDIWP3yg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzE1LzIyLzU5LzAx/LzM2MF9GXzE1MjI1/OTAxNjBfZ29lc3dH/aGQ0TkN2aERBYW1i/ZXZwd0h3bXZuNnhm/R1QuanBn'); */
   background-size: cover;
   background-position: center;
-background-image: url("https://imgs.search.brave.com/x3Yb9sCDLVZaLEcMsQHaU2WZBYqkxne0uZ-sXhj_LiU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy82/LzYxL1N3ZWV0cG9u/Z2FsLmpwZw");
+
   height: 300px;
   display: flex;
   align-items: center;
