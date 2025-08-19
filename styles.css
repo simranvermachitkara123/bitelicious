@@ -360,11 +360,13 @@ body {
   margin: 40px auto 24px auto;
   padding-bottom: 12px;
   position: relative;
-  color: #5e2705; /* or #a87753 for lighter brown */
-  font-family: 'Raleway', sans-serif;
+  color: #4a2c1d; /* or #a87753 for lighter brown */
+  /* font-family: 'Raleway', sans-serif; */
   letter-spacing: 0px;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
+  /* font-family: 'Orbitron', sans-serif; Same futuristic font */
+  font-family: 'Roboto', sans-serif;
 }
 
 .section-title::after {
@@ -419,3 +421,7 @@ body {
 .nav-links .dropdown:focus-within .dropdown-menu {
   display: block;
 }
+a, u {
+  text-decoration: none;
+}
+
