@@ -1,0 +1,108 @@
+:root {
+  --beige-lightest: #e6d7cb;
+  --beige-light: #d2b7a3;
+  --brown-medium: #a87753;
+  --brown-dark: #543a28;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--beige-lightest);
+  color: var(--brown-dark);
+  line-height: 1.7;
+}
+
+/* Header */
+header {
+  text-align: center;
+  /* background: var(--brown-dark); */
+  background: var(--brown-medium);
+  color: var(--white);
+  padding: 50px 20px;
+  border-bottom: 6px solid var(--brown-medium);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Main Section */
+.about-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.about-card {
+  background: var(--white);
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 6px solid var(--brown-medium);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(84, 58, 40, 0.15);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.about-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-card h2 {
+  margin-bottom: 10px;
+  color: var(--brown-dark);
+}
+
+.about-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.about-card ul li {
+  margin-bottom: 8px;
+  color: var(--brown-medium);
+}
+
+/* Small animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Container for About Section */
+.about-container {
+  max-width: 900px;       /* limits width */
+  margin: 40px auto;      /* centers container and adds spacing */
+  padding: 20px;
+  background-color: #a87753;  /* your brown-medium color */
+  border-radius: 15px;    /* rounded corners */
+  text-align: center;
+  color: #fff;
+}
+
+/* Heading inside the container */
+.about-container h1 {
+  margin: 10px 0;         /* reduces vertical spacing */
+  font-size: 2rem;        /* smaller heading if needed */
+}
+
+/* Subheading/paragraph inside the container */
+.about-container p {
+  margin: 5px 0 15px 0;   /* reduces vertical spacing */
+  font-size: 1.1rem;
+}

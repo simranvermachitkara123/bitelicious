@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BITELICIOUS</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"> <!-- Adding Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar" >
+  <div class="navbar-container">
+    <div class="logo" >
+      <img src="logo.png" alt="Bitelicious Logo" class="logo-img" />
+    </div>
+    <!-- Nav Links
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">🏠 HOME</a></li>
+      <li><a href="#veg">🥦 VEG DISHES</a></li>
+      <li><a href="#desserts">🍩 DESSERTS</a></li>
+      <li><a href="about.html">📖 ABOUT US</a></li>
+      <li><a href="contact.html">📞 CONTACT</a></li>
+      <li><a href="review.html">💬 REVIEW</a></li>
+    </ul> -->
+    <ul class="nav-links" id="nav-links">
+  <li><a href="index.html">🏠 HOME</a></li>
+  <li class="dropdown">
+    <a href="#veg">🥦 VEG DISHES</a>
+    <ul class="dropdown-menu">
+      <li><a href="#north-indian">North Indian</a></li>
+      <li><a href="#south-indian">South Indian</a></li>
+      <li><a href="#italian">Italian</a></li>
+      <li><a href="#mexican">Mexican</a></li>
+      
+    </ul>
+  </li>
+  <li><a href="#desserts">🍩 DESSERTS</a></li>
+  <li><a href="drinks.html">🥤 DRINKS</a></li>
+  <li><a href="about.html">📖 ABOUT US</a></li>
+  <li><a href="contact.html">📞 CONTACT</a></li>
+  <li><a href="review.html">💬 REVIEW</a></li>
+  
+
+</ul>
+
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="search-bar">
+    <input type="text" placeholder="Search your dish" />
+    <button>Go</button>
+  </div>
+</header>
+
+
+  <!-- Veg Recipes Section -->
+  <section class="recipes-section" id="veg" >
+    <!-- <h2 class="section-title">BOLD BITES OF BHARAT</h2> -->
+    <h2 class="section-title" id="north-indian">NORTH INDIAN</h2>
+    <div class="recipes">
+      <a href="paneer_masala.html" class="card-link">
+      <div class="recipe-card">
+        <img src="https://i.pinimg.com/474x/fb/f7/be/fbf7be59247865496a6670d365a6a373.jpg" alt="Paneer" />
+        <h3>PANEER BUTTER MASALA</h3>
+        <p>Rich, creamy & totally comforting 💛</p>
+      </div></a>
+      
+      <a href="dahibhalla.html" class="card-link">
+      <div class="recipe-card">
+        <img src="https://imgs.search.brave.com/3nRyF-nxEecF1mKfOa3BmX23fwnBebUfzbfABXEex50/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9kYWhpLXZhZGEt/YmhhbGxhLWlzLXR5/cGUtY2hhYXQtb3Jp/Z2luYXRpbmctZnJv/bS1pbmRpYW4tcG9w/dWxhci1zb3V0aC1h/c2lhXzQ2NjY4OS0x/MzYxLmpwZz9zZW10/PWFpc19oeWJyaWQm/dz03NDA" alt="Veg Biryani" />
+        <h3>DAHI BHALLA</h3>
+        <p>Soft lentil dumplings in chilled yogurt, topped with chutneys</p>
+      </div></a>
+      <a href="saag.html" class="card-link">
+        <div class="recipe-card">
+          <img src="https://imgs.search.brave.com/h2UwQbhdFyAGcICGDOiSdYrelMTqkbQ9IlwPSidk_E0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y2x1Ym1haGluZHJh/LmNvbS9ibG9nL2lt/YWdlcy9TYXJzb24t/a2EtU2FhZy1hdXIt/TWFra2kta2ktUm90/aS1SZWNpcGUtcmVz/aXplZC5qcGc" alt="Sarson Ka Saag" />
+          <h3>SARSON KA SAAG</h3>
+          <p>Mustard greens & spinach cooked with spices</p>
+        </div></a>
+      <!-- <div class="recipe-card">
+        <img src="https://imgs.search.brave.com/h2UwQbhdFyAGcICGDOiSdYrelMTqkbQ9IlwPSidk_E0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y2x1Ym1haGluZHJh/LmNvbS9ibG9nL2lt/YWdlcy9TYXJzb24t/a2EtU2FhZy1hdXIt/TWFra2kta2ktUm90/aS1SZWNpcGUtcmVz/aXplZC5qcGc" alt="masala dosa" />
+        <h3>SARSON KA SAAG</h3>
+        <p>Mustard greens & spinach cooked with spices</p>
+      </div> -->
+        <a href="dal_tadka.html" class="card-link">
+        <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSASWoGdCJ9PrJC53RVX-lkpVivpD_acxLYJQ&s" alt="Dal Tadka" />
+        <h3>DAL TADKA</h3>
+        <p>Comforting and nutritious yellow dal</p>
+      </div></a>
+      <a href="samosa.html" class="card-link">
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf5JxXN3yIx-B6GoyV4163mwyJ-WjxMa7iyQ&s" alt="Veg Samosa" />
+        <h3>SAMOSA</h3>
+        <p>Crunchy, spicy & perfect for snacks </p>
+      </div></a>
+      <a href="bhature.html" class="card-link">
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcFoXlpO44TFsgvzcaTuECDcF_wGFVcRocfw&s" alt="Chole Bhature" />
+        <h3>CHOLE BHATURE</h3>
+        <p>Spicy chickpeas served with fried bread</p>
+      </div></a>
+      <!-- <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6D3X72woclFb2HV7VWBRaa6izkSyCj7U2Rg&s" alt="Greek Salad" />
+        <h3>RAJMA CHAWAL</h3>
+        <p>Kidney beans curry served with rice</p>
+      </div> -->
+    </div>
+  </section>
+  <section class="recipes-section" id="south-indian">
+  <h2 class="section-title">SOUTH INDIAN</h2>
+  <div class="recipes">
+    <!-- Idli -->
+     <a href="idli.html" class="card-link">
+    <div class="recipe-card">
+      <img src="https://imgs.search.brave.com/LG_CLGGlrTeE4Ba8gs0xwuMiy74nRB4Gy8u0XIGyRRA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA4Lzc1LzgzLzA2/LzM2MF9GXzg3NTgz/MDY2N19kOEZhVmd1/aXNDanNIcmJMQmFy/aXRSaExXSElWbVBi/Qi5qcGc" alt="Idli" />
+      <h3>IDLI</h3>
+      <p>Soft steamed rice cakes served with chutney and sambar</p>
+    </div></a>
+    <!-- Dosa -->
+     <a href="dosa.html" class="card-link">
+    <div class="recipe-card">
+      <img src="https://imgs.search.brave.com/Pwlwmze2rsktY5c5lyLxm_0-FBJYlPC0XxH7ToV9cDc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEyLzEzLzg1LzQy/LzM2MF9GXzEyMTM4/NTQyNjJfZ3ROSVo4/bkg0d3pYWUViSnFz/UngxRnk3dDhLOFRz/RlYuanBn" alt="Dosa" />
+      <h3>DOSA</h3>
+      <p>Thin, crispy crepe made from fermented rice and lentil batter</p>
+    </div></a>
+    <!-- Uttapam -->
+     <a href="uttapam.html" class="card-link"><
+    <div class="recipe-card">
+      <img src="https://imgs.search.brave.com/O_7ujAF88Qe6xKdcJkqyojcN8NIlLs0BQ9Zez3aEUQc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTEz/MTM1Mzg3Mi9waG90/by9pbmRpYW4tdXR0/YXBhbS1wYW5jYWtl/cy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9WW9OTlloUV9G/SENQMDliaU4wcFoz/cGhqU1NGNU1TMVVM/eFN5bk93V1QtRT0" alt="Uttapam" />
+      <h3>UTTAPAM</h3>
+      <p>Thick savory pancake topped with onions, tomatoes, and chilies</p>
+    </div></a>
+    <!-- Medu Vada -->
+     <a href="vada.html" class="card-link">
+    <div class="recipe-card">
+      <img src="https://t4.ftcdn.net/jpg/14/28/45/03/240_F_1428450305_RSLPd535twrJMqYaKWW6yzTIMfBzAOT4.jpg" alt="Medu Vada" />
+      <h3>MEDU VADA</h3>
+      <p>Crispy fried lentil doughnuts with a fluffy inside</p>
+    </div></a>
+    <!-- Pongal -->
+     <a href="pongal.html" class="card-link">
+    <div class="recipe-card">
+      <img src="https://imgs.search.brave.com/vqqXt7RyxXi8Mbod4nGskHSMw-26iASOxtP6xJTJf10/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg3LzVm/LzUxLzg3NWY1MTE3/Njg0Zjg2MjZhMzZh/OTU1OTM2MzVhNzIw/LmpwZw" alt="Pongal" />
+      <h3>PONGAL</h3>
+      <p>Comforting rice and moong dal dish flavored with pepper and ghee</p>
+    </div></a>
+    <!-- Filter Coffee -->
+    <!-- <div class="recipe-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIuQf5EEgeM78NnrfMHUuGhn0Zb9hZq6Qxqg&s" alt="Filter Coffee" />
+      <h3>FILTER COFFEE</h3>
+      <p>Strong, aromatic coffee brewed the traditional South Indian way</p>
+    </div> -->
+    <!-- Appam -->
+     <a href="appam.html" class="card-link">
+    <div class="recipe-card">
+      <img src="https://imgs.search.brave.com/HpEaqmvPEpgSZwIB3NTGJS4nEwL8cLqOx2zHyPSIn0M/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXRlLnZpc3Rh/LmNvbS9hcGkvbWVk/aWEvc21hbGwvMTE5/Mzk1NDE4L3N0b2Nr/LXBob3RvLXNvdXRo/LWluZGlhbi1wb3B1/bGFyLWZvb2QtYXBw/ZS1vci1hcHBhbS1v/ci1yYXZhLWFwcGU" alt="Appam" />
+      <h3>APPAM</h3>
+      <p>Soft, lacy rice pancakes served with coconut milk or stew</p>
+    </div></a>
+  </div>
+</section>
+
+  </section>
+  <section class="recipes-section" id="veg">
+    <h2 class="section-title" id="italian">ITALIAN</h2>
+    <div class="recipes">
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxDglB44KYOKPMkSu6p4tn4idJcGsUg_YUeA&s" alt="Margherita Pizza" />
+        <h3>MARGHERITA PIZZA</h3>
+        <p>Classic, cheesy, and totally iconic 🍅🧀</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP07-2ZBwCmIQITD6-S166slwzAJs33Tk4dg&s" alt="Spaghetti Aglio e Olio" />
+        <h3>SPAGHETTI AGLIO E OLIO</h3>
+        <p>Simple garlic pasta with olive oil and herbs 🌿</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfAJPNj9l4KBLycIe6pBBUs7WEY2LKaw4BCw&s" alt="Vegetarian Lasagna" />
+        <h3>VEGGIE LASAGNA</h3>
+        <p>Layered with veggies, sauce & creamy béchamel 😍</p>
+      </div>
+      <!-- <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_xl2cUZebHKvHamemJ8g2fCBYeNjcIcQSQ&s" alt="Mushroom Risotto" />
+        <h3>MUSHROOM RISOTTO</h3>
+        <p>Creamy Arborio rice with earthy mushrooms 🍚</p>
+      </div> -->
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKlXu8swlI1U61mjXLxoOdOaJz_lHJBUnMgg&s" alt="Bruschetta" />
+        <h3>BRUSCHETTA</h3>
+        <p>Toasted bread with tomatoes, basil & olive oil 🫒</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1fgAifBuy-4UNOxZrBtpJE6ro04lTbt_rnw&s" alt="Pesto Pasta" />
+        <h3>PESTO PASTA</h3>
+        <p>Fresh basil, garlic & pine nuts blended to perfection 💚</p>
+      </div>
+      <a href="gnochi.html" class="card-link">
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqwPS7EaiuVmKaMZecetmzBr-ZMR604ruzmw&s" alt="Potato Gnocchi" />
+        <h3>GNOCCHI</h3>
+        <p>Soft potato dumplings served with tomato or pesto 🍅</p>
+      </div>
+      </a>
+    </div>
+  </section>
+
+<!-- Mexican Vegetarian Dishes Section -->
+<section class="recipes-section">
+  <h2 class="section-title" id="mexican">MEXICAN</h2>
+  <div class="recipes">
+    <!-- Vegetarian Tacos -->
+    <div class="recipe-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYqx3N54UpRq7G-vg7m8YWr8YmmGfy4W8fog&s" alt="Vegetarian Tacos" />
+      <h3>VEGETARIAN TACOS</h3>
+      <p>Filled with beans, veggies, and cheese, served with fresh salsa and avocado</p>
+    </div>
+    <!-- Vegetarian Enchiladas -->
+    <!-- <div class="recipe-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQHkq_dRbA3aa48XglvIuP_FC1jxjAT7dWYg&s" alt="Vegetarian Enchiladas" />
+      <h3>VEGETARIAN ENCHILADAS</h3>
+      <p>Corn tortillas rolled and stuffed with veggies, topped with green sauce and cheese</p>
+    </div> -->
+    <!-- Chiles Rellenos -->
+    <div class="recipe-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3eN60Dj90MBK48uOyVc3K095NpKF4DkMEHw&s" alt="Chiles Rellenos" />
+      <h3>CHILES RELLENOS</h3>
+      <p>Stuffed peppers with cheese or beans, lightly fried and served with tomato sauce</p>
+    </div>
+    <!-- Vegetarian Quesadillas -->
+    <div class="recipe-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR75pBEcFJJoH2ILasGIHKwA-KzQNHJye0-Uw&s" alt="Vegetarian Quesadillas" />
+      <h3>VEGETARIAN QUESADILLAS</h3>
+      <p>Flour tortillas filled with cheese, mushrooms, and veggies, grilled to perfection</p>
+    </div>
+    <!-- Guacamole -->
+     <a href="guccamole.html" class="card-link">
+    <div class="recipe-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtYLZp6FlVB82UdZmVnYN1Ic21GVxAoMaA4g&s" alt="Guacamole" />
+      <h3>GUACAMOLE</h3>
+      <p>A refreshing avocado dip with lime, cilantro, tomatoes, and a dash of salt</p>
+    </div>
+     </a>
+    <!-- Sopes -->
+    <div class="recipe-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsIlB3kRy7BMnd9zsxlCpKUjDZ5wKUjzWQIA&s" alt="Vegetarian Sopes" />
+      <h3>SOPES</h3>
+      <p>Thick tortillas with beans, lettuce, cheese, and salsa, perfect as a snack or meal</p>
+    </div>
+    <!-- Mexican Street Corn -->
+    <div class="recipe-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKBjKyW8UBvt7NQTGpQAQK05aSRtlmwoqxAg&s" alt="Mexican Street Corn" />
+      <h3>MEXICAN STREET CORN</h3>
+      <p>Grilled corn on the cob slathered in cheese, chili powder, and a squeeze of lime</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Dessert Section -->
+  <section class="recipes-section" id="desserts">
+    <h2 class="section-title">DUSTED & DELICIOUS</h2>
+    <div class="recipes">
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVys78mi4nMQhBqQHaNIVRjhEN4AHbC6TzCA&s" alt="Gulab Jamun" />
+        <h3>GULAB JAMUN</h3>
+        <p>Soft, warm & soaked in sweetness 💕</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWWITKzNrOzEqSFrXWL4xzohSYl_Hz9qJxXw&s" alt="Brownie" />
+        <h3>CHOCO BROWNIE</h3>
+        <p>Fudgy, gooey, and dreamy 😍</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvXUI1BMuJXypHy1opclhSyCxRAKnTy_RomBtGut6CckKPA2O4HjHfAPVf9e4b4MWOhjk&usqp=CAU" alt="cheescake" />
+        <h3>CHEESCAKE</h3>
+        <p>The sweetness and the salt going perfectly together</p>
+      </div>
+      <!-- <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUPJ2ZLw0QulIEEd8_k7fDbwJqizwFdEkOg&s" alt="chia pudding" />
+        <h3>CHIA PUDDING</h3>
+        <p>milk, chia seeds, sugar to taste, and vanilla</p>
+      </div> -->
+      <a href="donuts.html" class="card-link">
+        <div class="recipe-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bGkxH9YZuV7mFUiw6TEdzmhjRUsofd2eRg&s" alt="donuts" />
+          <h3>DONUTS</h3>
+          <p>A sweet circle of happiness in every bite!</p>
+        </div>
+      </a>
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN6jKQfFJM7T-qTUTsNy6wkenebjdwju9xqg&s" alt="tiramisu" />
+        <h3>TIRAMISU</h3>
+        <p>Layers of coffee-soaked ladyfingers with mascarpone cream</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSaQRl5pSnH524MhjBqDhxHws4NVQVZRQmDg&s" alt="rasmalai" />
+        <h3>RASMALAI</h3>
+        <p>Flattened rasgullas soaked in saffron-milk and topped with nuts</p>
+      </div>
+    </div>
+
+
+ <!-- Footer -->
+<footer class="footer">
+  <p>Made with LOVE by <strong>OUR TEAM</strong> for<strong> FOOD LOVERS💗</strong> | &copy; 2025 <strong>BITELICIOUS</strong></p>
+
+  <!-- Optional Links Section -->
+  <p>
+    <a href="#">Instagram</a> |
+    <a href="review.html">Feedback</a> |
+    <a href="contact.html">Contact Us</a>
+  </p>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+/* Background image */
+body {
+    /* background-image: url('https://media.istockphoto.com/id/1466465547/photo/handmade-chocolate-with-lyophilized-berry-fruits.jpg?s=612x612&w=0&k=20&c=NqyjJ2fMxNBEyAuUAy6H0OjibIlDNvmmVxGz8s3dBJU='); */
+    /* background: url('https://imgs.search.brave.com/bNj0UYXxwQ85ACdSdABGyrn8j7-SXCeoFEq6o2WUxKg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTQv/Mjc3LzY4NC9zbWFs/bC9kZWxpY2lvdXMt/Zm9vZC1pbmdyZWRp/ZW50cy1vbi13b29k/ZW4tYmFja2dyb3Vu/ZC1waG90by5qcGc'); */
+    background-image: url(contact.jpg);
+    background-size: cover;
+    background-position: center;
+    /* color: white; */
+    color: #0c0202;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.container {
+  background: rgba(168, 119, 83, 0.92); /* semi-transparent brown */
+  padding: 40px;
+  border-radius: 15px;
+
+  width: 90%;           /* shrink to match board edges */
+  max-width: 780px;     /* better fit on large screens */
+  text-align: center;
+
+  /* Centering */
+  margin: 0 auto;
+
+  /* Depth */
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+
+  
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.3em;
+    
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  label {
+    display: block;
+    font-size: 1.3em;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color:saddlebrown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+  }
+  
+  button:hover {
+    background-color: black;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Popup */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .popup-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .popup-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

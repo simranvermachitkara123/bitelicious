@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5; /* light beige */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+ background-color: #e6d7cb; /* lighter beige */
+  color: #543a28; /* dark brown for text */
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+header p {
+  font-size: 1.2rem;
+ 
+  color: #7a5c49; /* softer brown */
+  margin-top: 0;
+}
+
+/* Drinks Grid */
+.drinks-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Drink Card */
+.drink-card {
+  background: #fff;
+  border: 2px solid #a87753; /* Placeholder border */
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.drink-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Image Placeholder */
+.drink-image {
+  width: 100%;
+  height: 200px;
+  background: #e6d7cb;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.drink-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Recipe Text */
+.drink-recipe {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.drink-recipe h2 {
+  color: #543a28;
+  margin-bottom: 8px;
+}
+
+.drink-card:hover {
+  background: var(--beige-light); /* After hover: light beige */
+  box-shadow: 0 0 20px var(--brown-medium);
+  /* No other color changes */
+}

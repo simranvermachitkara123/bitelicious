@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Recipe Finder</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>If you have any questions or suggestions, feel free to get in touch with us!</p>
+
+    <form id="contactForm" action="#" method="post">
+      <table>
+        <tr>
+          <td><label for="name">Name:</label></td>
+          <td><input type="text" id="name" name="name" required></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+          <td><label for="message">Message:</label></td>
+          <td><textarea id="message" name="message" rows="6" required></textarea></td>
+        </tr>
+      </table>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="contact.js"></script>
+</body>
+</html>
