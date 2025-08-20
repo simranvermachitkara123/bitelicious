@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mexican Street Corn Recipe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">🌿 <strong>BITELICIOUS</strong></div>
+      <ul class="nav-links">
+        <li><a href="index.html">🏠 HOME</a></li>
+        <li><a href="#veg">🥦 VEG DISHES</a></li>
+        <li><a href="#desserts">🍩 DESSERTS</a></li>
+        <li><a href="about.html">📖 ABOUT US</a></li>
+        <li><a href="contact.html">📞 CONTACT</a></li>
+        <li><a href="review.html">💬 REVIEW</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfg6qqkErvM-JFn4CgcteYMzFRr1bTi8TkIw&s')">
+    <div class="hero-content">
+      <h1>Mexican Street Corn (Elote)</h1>
+      <h3>“Grilled corn smothered with creamy, cheesy, and tangy flavors.”</h3>
+    </div>
+  </section>
+
+  <!-- RECIPE INFO -->
+  <section class="recipe-info">
+    <p><i class="fas fa-users"></i> <strong>Serves:</strong> 4 people</p>
+    <p><i class="fas fa-clock"></i> <strong>Prep Time:</strong> 10 minutes</p>
+    <p><i class="fas fa-hourglass-half"></i> <strong>Rest Time:</strong> None</p>
+    <p><i class="fas fa-fire"></i> <strong>Cooking Time:</strong> 15 minutes</p>
+  </section>
+
+  <h2>Ingredients:</h2>
+  <div class="recipe-card">
+    <ul>
+      <li>4 ears corn (grilled)</li>
+      <li>1/4 cup mayonnaise</li>
+      <li>1/4 cup sour cream</li>
+      <li>1/2 cup cotija cheese (crumbled)</li>
+      <li>1 tsp chili powder</li>
+      <li>2 tbsp fresh cilantro (chopped)</li>
+      <li>Lime wedges for serving</li>
+    </ul>
+  </div>
+
+  <h2>Instructions:</h2>
+  <div class="recipe-card">
+    <ol>
+      <li>Grill corn until slightly charred.</li>
+      <li>Mix mayonnaise and sour cream in a bowl.</li>
+      <li>Spread mixture over hot corn.</li>
+      <li>Sprinkle with cotija cheese, chili powder, and cilantro.</li>
+      <li>Serve with lime wedges.</li>
+    </ol>
+  </div>
+
+  <h2>FAQs:</h2>
+  <div class="recipe-card">
+    <section>
+      <p><strong>Q: Can I use frozen corn?</strong><br>
+      A: Fresh corn is best, but frozen works if thawed and grilled properly.</p>
+
+      <p><strong>Q: What if I don’t have cotija cheese?</strong><br>
+      A: Substitute with feta or parmesan.</p>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>Made with LOVE by <strong>OUR TEAM</strong> | &copy; 2025 <strong>BITELICIOUS</strong></p>
+  </footer>
+</body>
+</html>
