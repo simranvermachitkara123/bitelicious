@@ -274,3 +274,87 @@ section p strong {
 .show-answer {
   display: block !important;
 }
+/*Responsive Design */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .recipe-info {
+    gap: 30px;
+  }
+
+  .recipe-card {
+    padding: 20px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hero {
+    height: 220px;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero h3 {
+    font-size: 1rem;
+  }
+
+  .recipe-info {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .recipe-card {
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  ul, ol {
+    margin: 15px 20px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links li a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h3 {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 20px 10px;
+  }
+}

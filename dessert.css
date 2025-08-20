@@ -1,0 +1,148 @@
+:root {
+  --beige-lightest: #e6d7cb;
+  --beige-light: #d2b7a3;
+  --brown-medium: #a87753;
+  --brown-dark: #543a28;
+  --white: #fff;
+  --black: #000;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  background: var(--beige-lightest);
+  color: var(--brown-dark);
+}
+
+/* Header */
+.dessert-header {
+  text-align: center;
+  padding: 2rem;
+  background: var(--beige-light);
+  border-bottom: 3px solid var(--brown-medium);
+}
+
+.dessert-header h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.dessert-header p {
+  font-size: 1.2rem;
+  color: #7a5c49
+  margin: 0;
+}
+
+/* Main Container */
+.dessert-container {
+  display: flex;
+  background: var(--white);
+  border: 3px solid var(--beige-light);   /* 🔥 Bolder default border */
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;  /* 🔥 Smooth border + hover effect */
+  min-height: 380px;   /* ✅ Uniform card height */
+}
+
+.dessert-container:hover {
+  transform: scale(1.02);
+  border: 4px solid var(--brown-medium);  /* 🔥 Bold border on hover */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);  /* 🔥 Stronger hover shadow */
+}
+
+/* Left Side */
+.dessert-left {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem;
+  border-right: 2px solid var(--beige-light);
+  display: flex;              
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dessert-left img {
+  width: 100%;
+  max-width: 320px;
+  height: 220px;       /* ✅ Fixed uniform height */
+  border-radius: 10px;
+  object-fit: cover;   /* ✅ Keeps proportions */
+}
+
+.dessert-left h2 {
+  margin-top: 1rem;
+  color: var(--brown-dark);
+  font-size: 1.5rem;
+}
+
+/* Right Side */
+.dessert-right {
+  flex: 2;
+  padding: 2rem;
+  display: flex;              
+  flex-direction: column;
+  justify-content: center;    
+}
+
+.dessert-right h3 {
+  margin-top: 0;
+  color: var(--brown-dark);
+}
+
+.dessert-right p {
+  margin: 0.5rem 0 1rem;
+  font-size: 1rem;
+  color: var(--brown-medium);
+}
+
+.dessert-right ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--brown-medium);
+}
+
+.dessert-right ul li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+
+.home-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  color: #333;
+  text-decoration: none;
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.home-btn:hover {
+  background: #a87753;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dessert-container {
+    flex-direction: column;
+    min-height: auto;  
+  }
+  .dessert-left {
+    border-right: none;
+    border-bottom: 2px solid var(--beige-light);
+  }
+  .dessert-left img {
+    max-width: 100%;
+    height: auto;  
+  }
+}

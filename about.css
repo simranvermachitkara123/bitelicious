@@ -106,3 +106,91 @@ header p {
   margin: 5px 0 15px 0;   /* reduces vertical spacing */
   font-size: 1.1rem;
 }
+/*  Responsive Design */
+
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .about-section {
+    padding: 15px;
+  }
+  .about-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-btn {
+    font-size: 24px;
+    padding: 8px 10px;
+    top: 10px;
+    left: 10px;
+  }
+  header {
+    padding: 40px 15px;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  .about-container {
+    padding: 15px;
+  }
+  .about-container h1 {
+    font-size: 1.6rem;
+  }
+  .about-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 30px 10px;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  .about-section {
+    margin: 20px auto;
+  }
+  .about-card {
+    margin: 15px 0;
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+  .about-card h2 {
+    font-size: 1.2rem;
+  }
+  .about-container h1 {
+    font-size: 1.4rem;
+  }
+  .about-container p {
+    font-size: 0.9rem;
+  }
+}
+.home-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  color: #333;
+  text-decoration: none;
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.home-btn:hover {
+  background: #a87753;
+  color: white;
+}
