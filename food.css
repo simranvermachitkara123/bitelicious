@@ -14,7 +14,7 @@ body {
 
 /* === Navbar === */
 .navbar {
-  background-color: #d2b48c; /* light brown */
+  background-color: #d2b7a3; /* light brown */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,8 +133,8 @@ body {
 
 .home-btn {
   position: fixed;
-  top: 15px;
-  left: 15px;
+  top: 10px;
+  left: 0px;
   font-size: 28px;
   color: #333;
   text-decoration: none;

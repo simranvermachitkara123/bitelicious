@@ -1,4 +1,4 @@
-/* ================= Global Reset ================= */
+/* === General Reset === */
 * {
   margin: 0;
   padding: 0;
@@ -7,45 +7,80 @@
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: var(--beige-lightest, #fffaf6);
-  color: var(--brown-dark, #3e2723);
+  background-color: #f8f3ed; /* very light beige */
+  color: #4b2e1f; /* dark brown for text */
   line-height: 1.6;
 }
 
-/* ================= Section Title ================= */
+/* === Navbar === */
+.navbar {
+  background-color: #d2b48c; /* light brown */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4b2e1f; /* dark brown */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #4b2e1f;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #7b4a33; /* darker brown hover */
+}
+
+/* === Section Title === */
 .section-title {
   position: relative;
   text-align: center;
-  font-size: 2.2rem;
-  color: var(--brown-dark, #3e2723);
+  font-size: 2rem;
+  color: #4b2e1f;
   margin: 2rem 0 2.5rem;
   font-weight: 700;
 }
 
+/* Decorative underline */
 .section-title::after {
   content: "";
   display: block;
   width: 80px;
   height: 4px;
-  background-color: var(--brown-medium, #8d6e63);
+  background-color: #d2b48c; /* light brown underline */
   margin: 0.5rem auto 0;
   border-radius: 2px;
 }
 
-/* ================= Recipes Section ================= */
+/* === Recipes Section === */
 .recipes-section {
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
+/* Grid layout */
+/* Grid layout – force even rows */
 .recipes {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* always 3 columns */
   gap: 2rem;
 }
 
-/* ================= Recipe Cards ================= */
+
+/* Each card fills its grid cell */
 .card-link {
   display: flex;
   height: 100%;
@@ -53,43 +88,45 @@ body {
   color: inherit;
 }
 
+/* Card styles */
 .recipe-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--white, #ffffff);
-  border: 1px solid var(--beige-light, #f5e6da);
+  background-color: #fff8f0;
+  border: 1px solid #d9c2a0;
   border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
-  min-height: 340px;
-  overflow: hidden;
+  min-height: 350px; /* ensures all cards at least this tall */
 }
 
 .recipe-card:hover {
-  background: var(--beige-lightest, #fffaf6);
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(168, 119, 83, 0.25);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
+/* Consistent image height */
 .recipe-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   display: block;
-  border-bottom: 1px solid var(--beige-light, #f5e6da);
+  border-bottom: 1px solid #d9c2a0;
 }
 
+/* Text area */
 .recipe-card h3 {
   font-size: 1.2rem;
   padding: 0.8rem 1rem 0 1rem;
-  color: var(--brown-medium, #8d6e63);
+  color: #4b2e1f;
 }
 
 .recipe-card p {
   font-size: 0.95rem;
   padding: 0.2rem 1rem 1rem 1rem;
-  color: var(--brown-dark, #3e2723);
+  color: #7b4a33;
   flex-grow: 1;
 }
