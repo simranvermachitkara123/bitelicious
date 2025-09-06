@@ -1,0 +1,95 @@
+/* ================= Global Reset ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--beige-lightest, #fffaf6);
+  color: var(--brown-dark, #3e2723);
+  line-height: 1.6;
+}
+
+/* ================= Section Title ================= */
+.section-title {
+  position: relative;
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--brown-dark, #3e2723);
+  margin: 2rem 0 2.5rem;
+  font-weight: 700;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--brown-medium, #8d6e63);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* ================= Recipes Section ================= */
+.recipes-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* ================= Recipe Cards ================= */
+.card-link {
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--white, #ffffff);
+  border: 1px solid var(--beige-light, #f5e6da);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.recipe-card:hover {
+  background: var(--beige-lightest, #fffaf6);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(168, 119, 83, 0.25);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--beige-light, #f5e6da);
+}
+
+.recipe-card h3 {
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem 0 1rem;
+  color: var(--brown-medium, #8d6e63);
+}
+
+.recipe-card p {
+  font-size: 0.95rem;
+  padding: 0.2rem 1rem 1rem 1rem;
+  color: var(--brown-dark, #3e2723);
+  flex-grow: 1;
+}
