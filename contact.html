@@ -19,7 +19,11 @@
       <table>
         <tr>
           <td><label for="name">Name:</label></td>
-          <td><input type="text" id="name" name="name" required></td>
+          <!-- <td><input type="text" id="name" name="name"  title="Only alphabets are allowed" required></td> -->
+          <td><input type="text" id="name" name="name" 
+           pattern="[A-Za-z ]+" 
+           title="Only alphabets and spaces are allowed" 
+           required></td>
         </tr>
         <tr>
           <td><label for="email">Email:</label></td>
