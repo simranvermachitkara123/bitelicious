@@ -8,7 +8,65 @@
   --black: #000;
 }
 
-/* styling the navbar */
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background:  #d2b7a3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color:black;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;   /* add padding for button shape */
+  border-radius: 50px;    /* makes them pill/circle shaped */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Normal state */
+.nav-links a {
+  background: #f9f9f9;  
+  border: 1px solid #eee;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  background:#543a28;
+  color: #fff;
+  border-color: #543a28;
+}
+
+/* Highlight Find Recipes */
+.nav-links .btn {
+  background: #543a28;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+}
+
+.nav-links .btn:hover {
+  background: #543a28;
+}
+/* styling the navbar
 .navbar {
   display: flex;
   justify-content: flex-start;
@@ -25,7 +83,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-}
+}*/
 body {
   margin: 0;
   background: var(--beige-lightest);
@@ -33,7 +91,7 @@ body {
   padding-bottom: 50px;
 }
 
-.logo {
+/*.logo {
   display: flex;
   align-items: center;
 }
@@ -95,7 +153,7 @@ body {
 .nav-links li a:hover {
   color: var(--brown-medium);
   transform: scale(1.05);
-}
+} */
 
 /* Hero Section */
 .hero {
@@ -116,7 +174,7 @@ body {
 .hero-content {
 
   background-color: rgba(230, 215, 203, 0.85); /* semi-transparent lightest beige */
-  padding: 2.5rem;
+  padding: 2.5rem 0%;
   border-radius: 1rem;
 }
 
@@ -410,9 +468,10 @@ a, u {
   }
 
 }
+
 .home-btn {
   position: fixed;
-  top: 110px;
+  top: 15px;
   left: 15px;
   font-size: 28px;
   color: #333;

@@ -106,10 +106,11 @@ body {
 
 
 
+
 .home-btn {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
   font-size: 28px;
   color: #333;
   text-decoration: none;
