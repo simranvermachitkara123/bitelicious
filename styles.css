@@ -374,6 +374,24 @@ a, u {
   text-decoration: none;
 }
 
+/* Theme toggle button - match other primary buttons */
+.theme-toggle {
+  margin-left: 12px;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  background: #543a28; /* same as other primary buttons */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.theme-toggle:hover {
+  background: #402a1f;
+  transform: scale(1.02);
+}
+
 /* ================== Responsive ================== */
 
 /* Tablets */
