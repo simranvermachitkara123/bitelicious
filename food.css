@@ -131,10 +131,11 @@ body {
   flex-grow: 1;
 }
 
+
 .home-btn {
   position: fixed;
-  top: 10px;
-  left: 0px;
+  top: 15px;
+  left: 15px;
   font-size: 28px;
   color: #333;
   text-decoration: none;
