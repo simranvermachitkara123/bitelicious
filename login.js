@@ -1,61 +1,146 @@
+// // Select forms
+// const signupForm = document.querySelector(".sign-up-container form");
+// const loginForm = document.querySelector(".sign-in-container form");
+
+// //signup........
+// signupForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   const name = signupForm.querySelector('input[type="text"]').value;
+//   const email = signupForm.querySelector('input[type="email"]').value;
+//   const password = signupForm.querySelector('input[type="password"]').value;
+
+//   // Get old users
+//   let users = JSON.parse(localStorage.getItem("users")) || [];
+
+
+//   const exists = users.find((user) => user.email === email); // email already exist
+//   if (exists) {
+//     alert("User already exists! Please login instead.");
+//     return;
+//   }
+
+
+//   const newUser = { name, email, password };  // new user object 
+
+//   // Add to array & store again
+//   users.push(newUser);
+//   localStorage.setItem("users", JSON.stringify(users));
+
+//   alert("Signup Successful 🎉");
+//   signupForm.reset();
+// });
+
+// // login........
+// loginForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   const email = loginForm.querySelector('input[type="email"]').value;
+//   const password = loginForm.querySelector('input[type="password"]').value;
+
+//   // Get stored users
+//   let users = JSON.parse(localStorage.getItem("users")) || [];
+
+//   // Check if user exists
+//   const validUser = users.find(
+//     (user) => user.email === email && user.password === password
+//   );
+
+//   if (validUser) {
+//     alert(`Welcome back, ${validUser.name}! `);
+//     localStorage.setItem("currentUser", JSON.stringify(validUser));
+//     window.location.href = "home.html"; // redirect if you want
+//   } else {
+//     alert("Invalid email or password.Please try again ");
+//   }
+// });
+
+
+
+
 // Select forms
 const signupForm = document.querySelector(".sign-up-container form");
 const loginForm = document.querySelector(".sign-in-container form");
 
-//signup........
+// Helper function to get data from localStorage
+function getUsers() {
+  return JSON.parse(localStorage.getItem("users")) || [];
+}
+
+// Helper function to save users to localStorage
+function saveUsers(users) {
+  localStorage.setItem("users", JSON.stringify(users));
+}
+
+// ✅ Signup validation and storage
 signupForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const name = signupForm.querySelector('input[type="text"]').value;
-  const email = signupForm.querySelector('input[type="email"]').value;
-  const password = signupForm.querySelector('input[type="password"]').value;
+  const name = signupForm.querySelector('input[type="text"]').value.trim();
+  const email = signupForm.querySelector('input[type="email"]').value.trim();
+  const password = signupForm.querySelector('input[type="password"]').value.trim();
 
-  // Get old users
-  let users = JSON.parse(localStorage.getItem("users")) || [];
+  // --- Validation ---
+  if (!name || !email || !password) {
+    alert("All fields are required!");
+    return;
+  }
 
+  // Email format validation
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
 
-  const exists = users.find((user) => user.email === email); // email already exist
+  // Password strength (min 6 chars)
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+    return;
+  }
+
+  // Load users and check if already exists
+  const users = getUsers();
+  const exists = users.find((user) => user.email === email);
+
   if (exists) {
     alert("User already exists! Please login instead.");
     return;
   }
 
-
-  const newUser = { name, email, password };  // new user object 
-
-  // Add to array & store again
+  // Save new user
+  const newUser = { name, email, password };
   users.push(newUser);
-  localStorage.setItem("users", JSON.stringify(users));
+  saveUsers(users);
 
   alert("Signup Successful 🎉");
   signupForm.reset();
 });
 
-// login........
+// ✅ Login validation
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const email = loginForm.querySelector('input[type="email"]').value;
-  const password = loginForm.querySelector('input[type="password"]').value;
+  const email = loginForm.querySelector('input[type="email"]').value.trim();
+  const password = loginForm.querySelector('input[type="password"]').value.trim();
 
-  // Get stored users
-  let users = JSON.parse(localStorage.getItem("users")) || [];
+  if (!email || !password) {
+    alert("Please fill in both email and password.");
+    return;
+  }
 
-  // Check if user exists
+  const users = getUsers();
+
+  // Validate user
   const validUser = users.find(
     (user) => user.email === email && user.password === password
   );
 
   if (validUser) {
-    alert(`Welcome back, ${validUser.name}! `);
+    alert(`Welcome back, ${validUser.name}!`);
     localStorage.setItem("currentUser", JSON.stringify(validUser));
-    window.location.href = "home.html"; // redirect if you want
+    window.location.href = "home_page.html"; // Redirect after login
   } else {
-    alert("Invalid email or password.Please try again ");
+    alert("Invalid email or password. Please try again.");
   }
 });
-
-
-
-
-

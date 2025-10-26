@@ -450,6 +450,29 @@ a, u {
   transform: scale(1.02);
 }
 
+
+
+
+
+/* Favorite button styling (heart) */
+.fav-btn {
+  margin-left: 8px;
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.fav-btn[aria-pressed="true"] { filter: drop-shadow(0 0 4px rgba(255,0,0,0.25)); }
+
+
+
+
+
+
+
+
+
 /* ================== Responsive ================== */
 
 /* Tablets */

@@ -35,12 +35,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Live menu search/filter
+// Live menu search/filter — enhanced: supports pages that use `.menu-item` (data-* driven)
+// or pages that use the card layout (`.search-bar input` + `.card-link`). This makes
+// `index.html` work without changing its HTML.
 (function () {
-  const searchInput = document.getElementById('menuSearch');
-  if (!searchInput) return; // nothing to do on pages without the input
+  // find input by id (preferred) or fallback to search-bar input used on index.html
+  let searchInput = document.getElementById('menuSearch');
+  if (!searchInput) searchInput = document.querySelector('.search-bar input');
+  if (!searchInput) return; // nothing to do if there's no search field
 
-  const items = Array.from(document.querySelectorAll('.menu-item'));
+  // determine items to search: prefer .menu-item (app-wide data-driven items), else use .card-link
+  let items = Array.from(document.querySelectorAll('.menu-item'));
+  let useCardLinks = false;
+  if (items.length === 0) {
+    items = Array.from(document.querySelectorAll('.card-link'));
+    useCardLinks = true;
+  }
+
   function normalize(s) {
     return String(s || '').trim().toLowerCase();
   }
@@ -56,23 +67,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const matched = [];
     items.forEach(it => {
-      const text = normalize([
-        it.dataset.name,
-        it.dataset.ingredients,
-        it.dataset.category,
-        it.textContent
-      ].join(' '));
+      let text = '';
+      if (!useCardLinks) {
+        text = normalize([
+          it.dataset.name,
+          it.dataset.ingredients,
+          it.dataset.category,
+          it.textContent
+        ].join(' '));
+      } else {
+        // card-link layout: search the title and description inside the card
+        const title = it.querySelector('h3')?.textContent || '';
+        const desc = it.querySelector('p')?.textContent || '';
+        text = normalize((title + ' ' + desc + ' ' + (it.dataset.name || '')));
+      }
 
-      // require all tokens to be present (AND logic) so searches like "paneer masala" work
       const ok = tokens.every(t => text.includes(t));
       it.style.display = ok ? '' : 'none';
       if (ok) matched.push(it);
     });
-
-    // debug: log how many matched (useful while troubleshooting)
-    if (window.console && console.debug) {
-      console.debug('menuSearch:', { query: raw, tokens, total: items.length, matched: matched.length, matchedNames: matched.map(m => m.dataset.name) });
-    }
 
     const noEl = document.getElementById('noResults');
     if (noEl) noEl.style.display = (matched.length === 0) ? 'block' : 'none';
@@ -96,84 +109,71 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 })();
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   const searchInput = document.querySelector('.search-bar input');
+//   const searchBtn = document.querySelector('.search-bar button');
+//   const sections = document.querySelectorAll('.recipes-section');
 
-// Theme toggle (dark / light) — injects a toggle into the navbar and applies site overrides
-(function () {
-  const THEME_KEY = 'bitelicious-theme';
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+//   // Create "not found" message
+//   const notFoundMsg = document.createElement('p');
+//   notFoundMsg.textContent = "Recipe not found 🍽";
+//   notFoundMsg.style.textAlign = "center";
+//   notFoundMsg.style.fontSize = "1.5rem";
+//   notFoundMsg.style.color = "#ff4444";
+//   notFoundMsg.style.marginTop = "20px";
+//   notFoundMsg.style.display = "none";
+//   document.querySelector('.search-bar').insertAdjacentElement('afterend', notFoundMsg);
 
-  // CSS overrides for dark mode to cover common elements across pages
-  const themeCSS = `
-  /* Theme overrides injected by script.js */
-  html.dark, html.dark body { background: #0f1113 !important; color: #e6e6e6 !important; }
-  html.dark .navbar { background: #1b1b1b !important; box-shadow: none !important; }
-  html.dark .logo { color: #ffd9a6 !important; }
-  html.dark .nav-links a { background: transparent !important; color: #f0e6da !important; border-color: rgba(255,255,255,0.04) !important; }
-  html.dark .hero, html.dark .hero-text, html.dark .hero-image { background: transparent !important; }
-  html.dark .search-bar { background: #222425 !important; color: #fff !important; border: 1px solid #2b2b2b !important; }
-  html.dark .menu-section, html.dark .menu-item { background: #0f1113 !important; border-color: rgba(255,255,255,0.04) !important; color: #e6e6e6 !important; }
-  html.dark .menu-item p, html.dark .menu-item h3 { color: #dcdcdc !important; }
-  html.dark .footer, html.dark .footer-bottom { background: #121212 !important; color: #cfcfcf !important; border-color: rgba(255,255,255,0.03) !important; }
-  html.dark a { color: #ffd59a !important; }
-  html.dark .menu-hint { color: #bca089 !important; }
-  html.dark #noResults { background: #2b1414 !important; border-color: #4a2222 !important; color: #ffcfcf !important; }
-  /* Smooth transition */
-  html, body, .menu-item, .navbar, .footer { transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease; }
-  `;
+//   const normalize = text => text.toLowerCase().trim();
 
-  // inject style once
-  function ensureThemeStyle() {
-    if (document.getElementById('bitelicious-theme-style')) return;
-    const s = document.createElement('style');
-    s.id = 'bitelicious-theme-style';
-    s.appendChild(document.createTextNode(themeCSS));
-    document.head.appendChild(s);
-  }
+//   function performSearch() {
+//     const query = normalize(searchInput.value);
+//     let anyMatch = false;
 
-  function applyTheme(theme) {
-    ensureThemeStyle();
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-    try { localStorage.setItem(THEME_KEY, theme); } catch (e) { /* ignore */ }
-  }
+//     sections.forEach(section => {
+//       const cards = section.querySelectorAll('.card-link');
+//       let sectionHasMatch = false;
 
-  // initial theme: stored setting -> system -> light
-  const stored = (() => { try { return localStorage.getItem(THEME_KEY); } catch { return null; } })();
-  const initial = stored || (prefersDark ? 'dark' : 'light');
-  applyTheme(initial);
+//       cards.forEach(cardLink => {
+//         const title = cardLink.querySelector('h3')?.textContent || '';
+//         const desc = cardLink.querySelector('p')?.textContent || '';
+//         const fullText = normalize(title + ' ' + desc);
 
-  // create toggle button and insert into navbar (if found)
-  function createToggle() {
-    const btn = document.createElement('button');
-    btn.id = 'themeToggle';
-    btn.type = 'button';
-    btn.setAttribute('aria-label', 'Toggle dark mode');
-    btn.title = 'Toggle dark / light mode';
-    btn.style.cssText = 'margin-left:0.5rem;padding:0.45rem 0.7rem;border-radius:8px;border:none;cursor:pointer;background:#fffaf5;color:#543a28;font-weight:600;';
-    btn.innerText = document.documentElement.classList.contains('dark') ? '🌙 Dark' : '☀️ Light';
-    btn.addEventListener('click', () => {
-      const current = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-      btn.innerText = next === 'dark' ? '🌙 Dark' : '☀️ Light';
-    });
-    return btn;
-  }
+//         if (query === '' || fullText.includes(query)) {
+//           cardLink.style.display = 'block';
+//           sectionHasMatch = true;
+//           anyMatch = true;
+//         } else {
+//           cardLink.style.display = 'none';
+//         }
+//       });
 
-  // Insert into .navbar if present
-  function mountToggle() {
-    const nav = document.querySelector('.navbar');
-    if (!nav) return;
-    // place at end of nav (after links)
-    const existing = document.getElementById('themeToggle');
-    if (existing) return;
-    const toggle = createToggle();
-    // try to add into nav right side
-    nav.appendChild(toggle);
-  }
+//       //no match
+//       section.style.display = sectionHasMatch ? 'block' : 'none';
+//     });
 
-  // Wait for DOM ready to mount toggle
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', mountToggle);
-  } else mountToggle();
+//     // show/hide not found message
+//     notFoundMsg.style.display = (!anyMatch && query !== '') ? 'block' : 'none';
 
-})();
+//     // reset when empty
+//     if (query === '') {
+//       sections.forEach(section => {
+//         section.style.display = 'block';
+//         section.querySelectorAll('.card-link').forEach(card => (card.style.display = 'block'));
+//       });
+//       notFoundMsg.style.display = 'none';
+//     }
+//   }
+
+//   searchBtn.addEventListener('click', e => {
+//     e.preventDefault();
+//     performSearch();
+//   });
+
+//   searchInput.addEventListener('keydown', e => {
+//     if (e.key === 'Enter') {
+//       e.preventDefault();
+//       performSearch();
+//     }
+//   });
+// });

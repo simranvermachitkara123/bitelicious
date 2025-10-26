@@ -16,9 +16,21 @@
     <div class="logo" strong >Bitelicious</div>
     <ul class="nav-links">
       <li><a href="index.html">Menu</a></li>
-      <li><a href="Food_category.html">Categories</a></li>
-      <!-- <li><a href="login.html" class="login">Login</a></li> -->
+      <!-- <li><a href="Food_category.html">Categories</a></li> -->
+      <li><a href="login.html" class="login">Login</a></li>
       <li><a href="contact.html" class="login">Contact</a></li>
+        
+      
+      
+      
+      <li><a href="favorites.html">Favorites</a></li>
+
+
+
+
+        <li><a href="about.html" class="login">About</a></li>
+        <li><a href="review.html" class="login">Reviews</a></li>
+
       
       
     </ul>
@@ -108,5 +120,45 @@
     <a href="contact.html">Contact Us</a>
   </p>
 </div>
+
+
+
+
+</div>
+
+
+
+
+<!-- Site scripts: shared behavior and favorites -->
+<script src="script.js"></script>
+<script src="js/favorites.js"></script>
+
+
+
+
+
+
+
+<!-- Diagnostic: show uncaught JS errors on the page to help debugging blank-screen issues -->
+<script>
+  window.addEventListener('error', function (ev) {
+    try {
+      var msg = 'Error: ' + ev.message + '\n' + ev.filename + ':' + ev.lineno + ':' + ev.colno;
+      document.body.innerHTML = '<pre style="white-space:pre-wrap;color:#900;background:#fff;padding:16px;">' + msg + '</pre>';
+      console.error(msg);
+    } catch (e) { console.error(e); }
+  });
+  window.addEventListener('unhandledrejection', function (ev) {
+    try {
+      var msg = 'Unhandled Rejection: ' + (ev.reason && ev.reason.message ? ev.reason.message : String(ev.reason));
+      document.body.innerHTML = '<pre style="white-space:pre-wrap;color:#900;background:#fff;padding:16px;">' + msg + '</pre>';
+      console.error(msg);
+    } catch (e) { console.error(e); }
+  });
+</script>
+
+
+
+
 </body>
 </html>
