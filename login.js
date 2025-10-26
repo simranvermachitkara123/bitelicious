@@ -54,3 +54,8 @@ loginForm.addEventListener("submit", (e) => {
     alert("Invalid email or password.Please try again ");
   }
 });
+
+
+
+
+
