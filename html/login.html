@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitelicious | Auth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/login.css">
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<a href="../html/home_page.html" class="home-btn-left">
+  <i class="fa-solid fa-house"></i>
+</a>
+  <!-- Animated Background -->
+  <div class="background">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <div class="container">
+    <!-- Toggle Checkbox -->
+    <input type="checkbox" id="toggle" aria-hidden="true">
+
+    <!-- Signup Form -->
+    <div class="form-container sign-up-container">
+      <form>
+        <h1>Create Account</h1>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button>Create Account</button>
+        <p class="social-text">Or Sign Up with</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-apple"></i></a>
+        </div>
+        <p class="switch">Already have an account? <label for="toggle">Login</label></p>
+      </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-container sign-in-container">
+      <form>
+        <h1>Login</h1>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button>Login</button>
+        <p class="social-text">Or Login with</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-apple"></i></a>
+        </div>
+        <p class="switch">Don’t have an account? <label for="toggle">Sign Up</label></p>
+      </form>
+    </div>
+
+    <!-- Overlay Side -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <src img="Logo_Image.png"></src>
+        <p>Discover recipes, save favorites, and enjoy cooking with us.</p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/login.js"></script>
+
+</body>
+</html>
