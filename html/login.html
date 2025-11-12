@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitelicious | Auth</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/login.css">
-  <!-- Font Awesome for Social Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-<a href="../html/home_page.html" class="home-btn-left">
-  <i class="fa-solid fa-house"></i>
-</a>
-  <!-- Animated Background -->
+  <a href="../html/home_page.html" class="home-btn-left">
+    <i class="fa-solid fa-house"></i>
+  </a>
+
   <div class="background">
     <div class="bubble"></div>
     <div class="bubble"></div>
@@ -23,17 +22,40 @@
   </div>
 
   <div class="container">
-    <!-- Toggle Checkbox -->
-    <input type="checkbox" id="toggle" aria-hidden="true">
+    <input type="checkbox" id="toggle" aria-hidden="true" />
 
-    <!-- Signup Form -->
     <div class="form-container sign-up-container">
-      <form>
+      <form id="signupForm">
         <h1>Create Account</h1>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button>Create Account</button>
+        <div class="input-group">
+          <input type="text" id="signupName" placeholder="Full Name" required />
+          <div class="error"></div>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="signupEmail" placeholder="Email" required />
+          <div class="error"></div>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="signupPassword" placeholder="Password" required />
+          <i class="fa-solid fa-eye toggle-password"></i>
+          <div class="error"></div>
+
+          <ul class="password-checklist">
+            <li id="length">At least 8 characters</li>
+            <li id="uppercase">One uppercase letter</li>
+            <li id="number">One number</li>
+            <li id="special">One special character (!@#$%^&*)</li>
+          </ul>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required />
+          <div class="error"></div>
+        </div>
+
+        <button type="submit">Create Account</button>
         <p class="social-text">Or Sign Up with</p>
         <div class="social-icons">
           <a href="#"><i class="fab fa-google"></i></a>
@@ -44,13 +66,22 @@
       </form>
     </div>
 
-    <!-- Login Form -->
     <div class="form-container sign-in-container">
-      <form>
+      <form id="loginForm">
         <h1>Login</h1>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button>Login</button>
+
+        <div class="input-group">
+          <input type="email" id="loginEmail" placeholder="Email" required />
+          <div class="error"></div>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="loginPassword" placeholder="Password" required />
+          <i class="fa-solid fa-eye toggle-password"></i>
+          <div class="error"></div>
+        </div>
+
+        <button type="submit">Login</button>
         <p class="social-text">Or Login with</p>
         <div class="social-icons">
           <a href="#"><i class="fab fa-google"></i></a>
@@ -61,15 +92,13 @@
       </form>
     </div>
 
-    <!-- Overlay Side -->
     <div class="overlay-container">
       <div class="overlay">
-        <src img="Logo_Image.png"></src>
         <p>Discover recipes, save favorites, and enjoy cooking with us.</p>
       </div>
     </div>
   </div>
-  <script src="../js/login.js"></script>
 
+  <script src="../js/login.js"></script>
 </body>
 </html>

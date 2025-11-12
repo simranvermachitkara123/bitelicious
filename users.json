@@ -1,0 +1,23 @@
+[
+  {
+    "username": "simran verma",
+    "displayName": "Simran verma",
+    "emailID": "simranverma@gmail.com",
+    "password": "Simran@123",
+    "hasLoggedInBefore": true
+  },
+  {
+    "username": "namisha bansal",
+    "displayName": "Namisha Bansal",
+    "emailID": "namishabansal123@gmail.com",
+    "password": "@Namisha123",
+    "hasLoggedInBefore": false
+  },
+  {
+    "username": "sakshi",
+    "displayName": "Sakshi",
+    "emailID": "sakshi1234@gmail.com",
+    "password": "Sakshi@123",
+    "hasLoggedInBefore": false
+  }
+]

@@ -340,3 +340,46 @@ body {
     border-bottom: none;
   }
 }
+
+
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Input box */
+.search-bar input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #eee;
+  border-radius: 50px; /* rounded like buttons */
+  outline: none;
+  background: #f9f9f9;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #543a28;
+  background: #fff;
+}
+
+/* Search button */
+.search-bar button {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  color: #333;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect same as nav buttons */
+.search-bar button:hover {
+  background: #543a28;
+  color: #fff;
+  border-color: #543a28;
+}

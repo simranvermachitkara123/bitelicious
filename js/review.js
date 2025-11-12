@@ -11,11 +11,37 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     // Get form values
-    const name = document.getElementById("name").value;
-    const recipe = document.getElementById("recipe").value;
+    const name = document.getElementById("name").value.trim();
+    const recipe = document.getElementById("recipe").value.trim();
     const rating = parseInt(document.getElementById("rating").value);
-    const reviewText = document.getElementById("review").value;
+    const reviewText = document.getElementById("review").value.trim();
 
+    // ✅ VALIDATIONS
+
+    // 1️⃣ Empty field check
+    if (name.trim() === "" || recipe.trim() === "" || reviewText.trim() === "") {
+  alert('⚠ Please fill in all fields before submitting.');
+  return;
+}
+
+    // 2️⃣ Alphabet check for name and recipe
+    const alphaRegex = /^[A-Za-z\s]+$/;
+    if (!alphaRegex.test(name)) {
+      alert('❌ Name should contain only alphabets.');
+      return;
+    }
+    if (!alphaRegex.test(recipe)) {
+      alert('❌ Recipe name should contain only alphabets.');
+      return;
+    }
+
+    // 3️⃣ Rating range validation
+    if (isNaN(rating) || rating < 1 || rating > 5) {
+      alert('⭐ Rating must be a number between 1 and 5.');
+      return;
+    }
+
+    // ✅ If all validations pass
     const reviewData = { name, recipe, rating, reviewText };
 
     // Add to DOM
@@ -29,12 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 
+  // Function to display review in DOM
   function addReviewToDOM({ name, recipe, rating, reviewText }) {
     const newReview = document.createElement("div");
     newReview.classList.add("review");
     newReview.innerHTML = `
       <p>"${reviewText}"</p>
-      <p><em>${recipe}</em></p>
+      <p>${recipe}</p>
       <p><strong>– ${name}</strong></p>
       <p>${"⭐".repeat(rating)}${"☆".repeat(5 - rating)}</p>
     `;

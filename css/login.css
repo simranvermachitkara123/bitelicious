@@ -118,7 +118,7 @@ form h1 {
 }
 
 form input {
-  margin: 8px 0;
+  margin: 10px 0;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #bbafaf;
@@ -256,8 +256,8 @@ form button:hover {
 }
 .home-btn-left {
   position: fixed;
-  top: 15px;         /* adjust vertical position */
-  right: 15px;         /* keeps it on the left edge */
+  top: 15px;        /* adjust vertical position */
+  right: 15px;       /* keeps it on the left edge */
   background: #fff;
   color: #543a28;
   font-size: 26px;
@@ -273,4 +273,26 @@ form button:hover {
   background: #a87753;
   color: #fff;
   transform: scale(1.1);
+}
+.password-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+  font-size: 14px;
+  display: none; /* Hides the list by default */
+  text-align: centre; /* Aligns text to the left for readability */
+}
+.password-checklist li {
+  color: red;
+  transition: color 0.3s ease;
+}
+.input-group {
+  position: relative;
+}
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  top: 30px; /* <-- This moves it down */
+  transform: translateY(-50%); /* <-- This perfectly centers it */
+  cursor: pointer;
 }
