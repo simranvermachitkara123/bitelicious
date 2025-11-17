@@ -19,5 +19,12 @@
     "emailID": "sakshi1234@gmail.com",
     "password": "Sakshi@123",
     "hasLoggedInBefore": false
+  },
+  {
+    "username": "saksham",
+    "displayName": "Saksham",
+    "emailID": "saksham@gmail.com",
+    "password": "Sakshi@123",
+    "hasLoggedInBefore": false
   }
 ]

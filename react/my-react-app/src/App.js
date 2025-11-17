@@ -1,13 +1,13 @@
-import React from 'react';
-import './App.css';
-import Counter from './components/styling/counter';
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/Login";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Counter/>
-      </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
   );
 }
-
-export default App;

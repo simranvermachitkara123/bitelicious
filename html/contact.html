@@ -6,38 +6,35 @@
   <title>Contact Us - Recipe Finder</title>
   <link rel="stylesheet" href="../css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 <body>
-<a href="../html/index.html" class="home-btn">&#11013;</a>
-<a href="../html/home_page.html" class="home-btn-left">
-  <i class="fa-solid fa-house"></i>
-</a>
+  <!-- Navigation Buttons -->
+  <a href="../html/index.html" class="home-btn">&#11013;</a>
+  <a href="../html/home_page.html" class="home-btn-left">
+    <i class="fa-solid fa-house"></i>
+  </a>
 
-
+  <!-- Contact Form -->
   <div class="container">
-    <h1>Contact Us</h1>
-    <p>If you have any questions or suggestions, feel free to get in touch with us!</p>
+    <h1><i class="fa-solid fa-envelope-open-text" style="color:#8b5e34;"></i> Contact Us</h1>
+    <p>If you have any questions, feedback, or suggestions — we’d love to hear from you!</p>
 
-    <form id="contactForm" action="#" method="post">
-      <table>
-        <tr>
-          <td><label for="name">Name:</label></td>
-          <!-- <td><input type="text" id="name" name="name"  title="Only alphabets are allowed" required></td> -->
-          <td><input type="text" id="name" name="name" 
-           pattern="[A-Za-z ]+" 
-           title="Only alphabets and spaces are allowed" 
-           required></td>
-        </tr>
-        <tr>
-          <td><label for="email">Email:</label></td>
-          <td><input type="email" id="email" name="email" required></td>
-        </tr>
-        <tr>
-          <td><label for="message">Message:</label></td>
-          <td><textarea id="message" name="message" rows="6" required></textarea></td>
-        </tr>
-      </table>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z ]+" title="Only alphabets and spaces are allowed" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
       <button type="submit">Send Message</button>
     </form>
   </div>
@@ -47,11 +44,10 @@
     <div class="popup-content">
       <h2>Thank You!</h2>
       <p>Your message has been sent successfully.</p>
-      <button onclick="closePopup()">Close</button>
+      <button id="closePopupBtn">Close</button>
     </div>
   </div>
 
-  <script src="../js/contact.js"></script>
-  <script src="../js/script.js"></script>
+  <script src="../js/contact.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,158 @@
+/* PAGE BACKGROUND */
+.auth-page {
+  background: linear-gradient(135deg, #b89f8d, #8f7563);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.card {
+  width: 520px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 35px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+/* SWITCH BUTTONS */
+.switch-box {
+  display: flex;
+  margin-bottom: 20px;
+  background: #f3e6dd;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.switch-box button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch-box .active {
+  background: #b47f63;
+  color: white;
+}
+
+/* TITLE */
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #49372d;
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #cbb7aa;
+  background: #f7f0eb;
+  font-size: 15px;
+}
+
+input,
+.btn-main {
+  box-sizing: border-box;   /* ← THIS FIXES THE WIDTH ISSUE */
+}
+
+.input-group {
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* STRENGTH LABEL */
+.strength {
+  margin-top: -5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* ERROR MESSAGE */
+.error-msg {
+  margin-top: -10px;
+  margin-bottom: 12px;
+  color: #b34b4b;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* PASSWORD RULES */
+.rules {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  list-style: none;
+  text-align: left;
+}
+
+.rules li {
+  margin: 5px 0;
+  color: #b34b4b;      /* red by default */
+  font-size: 14px;
+  display: flex;
+  gap: 6px;
+  transition: 0.2s ease;
+}
+
+/* Green + checkmark when fulfilled */
+.rules li.ok {
+  color: #2da56a;
+  font-weight: 600;
+}
+
+.rules li.ok::before {
+  content: "✔";
+  color: #2da56a;
+  font-weight: bold;
+}
+
+/* red bullet for incomplete */
+.rules li::before {
+  content: "•";
+  color: #b34b4b;
+}
+
+/* BUTTON */
+.btn-main {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #b47f63, #c89272);
+  border: none;
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-main:hover {
+  transform: scale(1.03);
+}
+
+/* SWITCH TEXT */
+.switch-text {
+  margin-top: 12px;
+}
+
+.switch-text span {
+  color: #b47f63;
+  font-weight: bold;
+  cursor: pointer;
+}
